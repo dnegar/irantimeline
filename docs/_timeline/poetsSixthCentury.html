@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="d3-milestones.css">
+  <link rel="stylesheet" href="timelineStylesheet.css">
+  <script src="d3-milestones.min.js"></script>
+
+  <a href="poets.html" style="display:inline-block;"><input type="button" value="بازگشت"/></a>
+  <p style="float:right;"><bold>قرن ششم</bold></p>
+  <div id="timeline" style="margin-top: 80px;"></div>
+  <ul>
+    <li><a href="https://w.wiki/A7w3">انوری</a></li>
+    <li><a href="https://w.wiki/A7w5">جمال‌الدین عبدالرزاق اصفهانی</a></li>
+    <li>ذوالفقار</li>
+    <li><a href="https://w.wiki/A7v$">اثیر اخسیکتی</a></li>
+    <li><a href="https://w.wiki/A7wB">سوزنی سمرقندی</a></li>
+    <li><a href="https://w.wiki/A7wE">نصرالله منشی</a></li>
+    <li><a href="https://w.wiki/A7wH">سموری سجزی</a></li>
+    <li><a href="https://w.wiki/A7wM">قوامی رازی</a></li>
+    <li><a href="https://w.wiki/A7wT">مجیرالدین بیلقانی</a></li>
+  </ul>
+
+  <script>
+    milestones('#timeline')
+      .mapping({
+        'timestamp': 'year',
+        'text': 'title',
+        'url': 'url'
+      })
+      .optimize(true)
+      .urlTarget('_blank')
+      .parseTime('%Y')
+      .aggregateBy('year')
+      .render([
+        { year: 438, title: 'مسعود سعد سلمان', url: 'https://w.wiki/A7wS'},
+        { year: 439, title: 'محمد معزی', url: 'https://w.wiki/A7wP'},
+        { year: 440, title: 'عمعق بخاری*', url: 'https://w.wiki/A7wJ'},
+        { year: 473, title: 'سنایی*', url: 'https://w.wiki/A7wA'},
+        { year: 481, title: 'رشیدالدین وطواط', url: 'https://w.wiki/A7w9'},
+        { year: 490, title: 'مهستی گنجوی', url: 'https://w.wiki/8C4j'},
+        { year: 501, title: 'فلکی شروانی*', url: 'https://w.wiki/A7wL'},
+        { year: 519, title: 'نظامی گنجوی', url: 'https://w.wiki/A7wR'},
+        { year: 520, title: 'خاقانی', url: 'https://w.wiki/A7w7'},
+        { year: 540, title: 'عطار', url: 'https://w.wiki/A7wF'},
+        { year: 546, title: 'ادیب صابر', url: 'https://w.wiki/A7w2'},
+        { year: 561, title: 'اوحدالدین کرمانی', url: 'https://w.wiki/A7w4'},
+      ]);
+  </script>
+</html>

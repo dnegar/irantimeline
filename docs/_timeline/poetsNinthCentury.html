@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="d3-milestones.css">
+  <link rel="stylesheet" href="timelineStylesheet.css">
+  <script src="d3-milestones.min.js"></script>
+
+  <a href="poets.html" style="display:inline-block;"><input type="button" value="بازگشت"/></a>
+  <p style="float:right;"><bold>قرن نهم</bold></p>
+  <div id="timeline" style="margin-top: 80px;"></div>
+  <ul>
+    <li><a href="">عصمت بخاری</a></li>
+    <li><a href="">شرف‌الدین رضای سبزواری</a></li>
+    <li><a href="">قبولی هروی</a></li>
+    <li><a href="">کاتبی ترشیزی</a></li>
+    <li><a href="">کمال خجندی</a></li>
+  </ul>
+
+  <script>
+    milestones('#timeline')
+      .mapping({
+        'timestamp': 'year',
+        'text': 'title',
+        'url': 'url'
+      })
+      .optimize(true)
+      .urlTarget('_blank')
+      .parseTime('%Y')
+      .aggregateBy('year')
+      .render([
+        { year: 757, title: 'قاسم انوار', url: ''},
+        { year: 766, title: 'امیر شاهی', url: ''},
+        { year: 784, title: 'آذری طوسی', url: ''},
+        { year: 817, title: 'جامی', url: ''},
+        { year: 843, title: 'حامدی اصفهانی', url: ''},
+      ]);
+  </script>
+</html>

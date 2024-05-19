@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="d3-milestones.css">
+  <link rel="stylesheet" href="timelineStylesheet.css">
+  <script src="d3-milestones.min.js"></script>
+
+  <a href="poets.html" style="display:inline-block;"><input type="button" value="بازگشت"/></a>
+  <p style="float:right;""><bold>قرن دهم</bold></p>
+  <div id="timeline" style="margin-top: 80px;"></div>
+  <ul>
+    <li><a href="">بابا فغانی شیرازی</a></li>
+    <li><a href="">ثنایی مشهدی</a></li>
+    <li><a href="">سحابی استرآبادی</a></li>
+    <li><a href="">شرف جهان قزوینی</a></li>
+    <li><a href="">شهیدی قمی</a></li>
+    <li><a href="">ضمیری اصفهانی</a></li>
+    <li><a href="">غزالی مشهدی</a></li>
+    <li><a href="">فکری جامه‌باف</a></li>
+    <li><a href="">محمدقاسم قاسمی گنابادی</a></li>
+    <li><a href="">لسانی شیرازی</a></li>
+    <li><a href="">میلی مشهدی</a></li>
+    <li><a href="">محمدحسین نظیری نیشابوری</a></li>
+    <li><a href="">نوعی خبوشانی</a></li>
+    <li><a href="">ولی دشت بیاضی</a></li>
+    <li><a href="">هلالی جغتایی</a></li>
+    <li><a href="">درویش دهکی</a></li>
+    <li><a href="">نظام استرآبادی</a></li>
+    <li><a href="">وحید تبریزی</a></li>
+    <li><a href="">فهمی استرآبادی</a></li>
+    <li><a href="">حیرتی تونی</a></li>
+    <li><a href="">فارغی مشهدی</a></li>
+    <li><a href="">عزیزی قزوینی</a></li>
+    <li><a href="">میر اشکی قمی</a></li>
+    <li><a href="">خواری تبریزی</a></li>
+    <li><a href="">خواجگی عنایت</a></li>
+    <li><a href="">صبری اصفهانی</a></li>
+    <li><a href="">شیخ رباعی</a></li>
+    <li><a href="">طرحی شیرازی</a></li>
+    <li><a href="">شجاع</a></li>
+    <li><a href="">کامی قزوینی</a></li>
+    <li><a href="">هجری قمی</a></li>
+    <li><a href="">حیدر کلیچه‌پز</a></li>
+    <li><a href="">عبدی بیگ شیرازی</a></li>
+    <li><a href="">کاهی کابلی</a></li>
+    <li><a href="">قیدی شیرازی</a></li>
+    <li><a href="">مخدوم شریفی</a></li>
+    <li><a href="">نظام‌الدین هاشمی</a></li>
+    <li><a href="">قراری گیلانی</a></li>
+    <li><a href="">حسابی نطنزی</a></li>
+    <li><a href="">رضایی کاشانی</a></li>
+    <li><a href="">محمدمیرک صالحی</a></li>
+    <li><a href="">حالتی تهرانی</a></li>
+    <li><a href="">صرفی ساوجی</a></li>
+    <li><a href="">حضوری قمی</a></li>
+    <li><a href="">قاضی نورالدین</a></li>
+    <li><a href="">غیرتی شیرازی</a></li>
+    <li><a href="">یادگاربیگ حالتی</a></li>
+    <li><a href="">وقوعی نیشابوری</a></li>
+    <li><a href="">وحشتی جوشقانی</a></li>
+    <li><a href="">انیسی شاملو</a></li>
+    <li><a href="">وقوعی تبریزی</a></li>
+    <li><a href="">شعیب جوشقانی</a></li>
+    <li><a href="">حیدر معمایی</a></li>
+    <li><a href="">فسونی یزدی</a></li>
+    <li><a href="">علی نقی کمره‌ای</a></li>
+  </ul>
+
+  <script>
+    milestones('#timeline')
+      .mapping({
+        'timestamp': 'year',
+        'text': 'title',
+        'url': 'url'
+      })
+      .optimize(true)
+      .urlTarget('_blank')
+      .parseTime('%Y')
+      .aggregateBy('year')
+      .render([
+        { year: 853, title: 'آصفی هروی', url: ''},
+        { year: 858, title: 'هاتفی خرجردی', url: ''},
+        { year: 858, title: 'اهلی شیرازی', url: ''},
+        { year: 887, title: 'محمد فضولی', url: ''},
+        { year: 905, title: 'محتشم کاشانی', url: ''},
+        { year: 909, title: 'ملک قمی', url: ''},
+        { year: 939, title: 'وحشی بافقی', url: ''},
+        { year: 944, title: 'ظهوری ترشیزی*', url: ''},
+        { year: 954, title: 'ابوالفتح گیلانی', url: ''},
+        { year: 954, title: 'فیضی دکنی', url: ''},
+        { year: 963, title: 'عرفی شیرازی', url: ''},
+      ]);
+  </script>
+</html>

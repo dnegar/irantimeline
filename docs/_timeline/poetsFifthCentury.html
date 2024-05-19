@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="d3-milestones.css">
+  <link rel="stylesheet" href="timelineStylesheet.css">
+  <script src="d3-milestones.min.js"></script>
+
+  <a href="poets.html" style="display:inline-block;"><input type="button" value="بازگشت"/></a>
+  <p style="float:right;"><bold>قرن پنجم</bold></p>
+  <div id="timeline" style="margin-top: 80px;"></div>
+  <ul>
+    <li><a href="https://w.wiki/A7vC">عسجدی</a></li>
+    <li><a href="https://w.wiki/A7vH">عیوقی</a></li>
+    <li><a href="https://w.wiki/A7vJ">غضائری رازی</a></li>
+    <li><a href="https://w.wiki/A7vK">فخرالدین اسعد گرگانی</a></li>
+    <li><a href="https://w.wiki/A7vM">قطران تبریزی</a></li>
+    <li><a href="https://w.wiki/A7vN">کافرک غزنوی</a></li>
+    <li><a href="https://w.wiki/A7vQ">لبیبی</a></li>
+    <li><a href="https://w.wiki/88HD">منوچهری دامغانی</a></li>
+  </ul>
+
+  <script>
+    milestones('#timeline')
+      .mapping({
+        'timestamp': 'year',
+        'text': 'title',
+        'url': 'url'
+      })
+      .optimize(true)
+      .urlTarget('_blank')
+      .parseTime('%Y')
+      .aggregateBy('year')
+      .render([
+        { year: 350, title: 'عنصری بلخی', url: 'https://w.wiki/A7vG'},
+        { year: 357, title: 'ابوسعید ابوالخیر', url: 'https://w.wiki/A7v8'},
+        { year: 370, title: 'فرخی سیستانی', url: 'https://w.wiki/A7vL'},
+        { year: 390, title: 'اسدی توسی', url: 'https://w.wiki/A7v9'},
+        { year: 390, title: 'باباطاهر', url: 'https://w.wiki/A7vB'},
+        { year: 394, title: 'ناصرخسرو', url: 'https://w.wiki/42o$'},
+        { year: 427, title: 'خیام', url: 'https://w.wiki/4VbW'},
+      ]);
+  </script>
+</html> 

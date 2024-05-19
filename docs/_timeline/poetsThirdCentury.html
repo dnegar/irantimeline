@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="d3-milestones.css">
+  <link rel="stylesheet" href="timelineStylesheet.css">
+  <script src="d3-milestones.min.js"></script>
+
+  <a href="poets.html" style="display:inline-block;"><input type="button" value="بازگشت"/></a>
+  <p style="float:right;"><bold>قرن سوم</bold></p>
+  <div id="timeline" style="margin-top: 80px;"></div>
+  <ul  dir="rtl">
+    <li>تاریخ‌های درج شده فقط جهت رسم نمودار است و درست نمی‌باشد.</li>
+  </ul>
+
+  <script>
+    milestones('#timeline')
+      .mapping({
+        'timestamp': 'year',
+        'text': 'title',
+        'url': 'url'
+      })
+      .optimize(true)
+      .urlTarget('_blank')
+      .parseTime('%Y')
+      .aggregateBy('year')
+      .render([
+        { year: 301, title: 'ابواسحاق جویباری', url: 'https://w.wiki/A7t4'},
+        { year: 302, title: 'ابوحفص سغدی', url: 'https://w.wiki/A7t7'},
+        { year: 303, title: 'ابوزراعه معمری', url: 'https://w.wiki/A7tG'},
+        { year: 304, title: 'ابوسلیک گرگانی', url: 'https://w.wiki/A7tJ'},
+        { year: 305, title: 'ابوشعیب هروی', url: 'https://w.wiki/A7tK'},
+        { year: 306, title: 'بسام کرد', url: 'https://w.wiki/A7tL'},
+        { year: 307, title: 'محمود وراق هروی', url: 'https://w.wiki/A7tT'},
+        { year: 308, title: 'محمد بن مخلد سگزی', url: 'https://w.wiki/A7tS'},
+        { year: 309, title: 'محمد بن وصیف سجزی', url: 'https://w.wiki/A7tR'},
+        { year: 310, title: 'فیروز مشرقی', url: 'https://w.wiki/A7tP'},
+        { year: 311, title: 'فرالاوی', url: 'https://w.wiki/A7tN'},
+        { year: 312, title: 'حنظله بادغیسی', url: 'https://w.wiki/A7tM'},
+      ]);
+  </script>
+</html>
