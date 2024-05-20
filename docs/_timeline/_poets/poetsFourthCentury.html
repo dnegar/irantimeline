@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="d3-milestones.css">
+    <link rel="stylesheet" href="timelineStylesheet.css">
+    <script src="d3-milestones.min.js"></script>
+  </head>
+  <body>
+    <a href="poets.html" style="display:inline-block;"><input type="button" value="بازگشت"/></a>
+    <p style="float:right;"><bold>قرن چهارم</bold></p>
+    <div id="timeline" style="margin-top: 80px;"></div>
+    <ul>
+      <li><a href="https://w.wiki/A7tk">ابوطاهر خسروانی</a></li>
+      <li><a href="https://w.wiki/A7tp">ابوطیب مصعبی</a></li>
+      <li><a href="https://w.wiki/A7tq">آغاجی بخارایی</a></li>
+      <li><a href="https://w.wiki/A7ty">ابوالعباس ربنجنی</a></li>
+      <li><a href="https://w.wiki/A7tz">ابوالعلای شوشتری</a></li>
+      <li><a href="https://w.wiki/A7t$">ابوالمؤید بلخی</a></li>
+      <li><a href="https://w.wiki/A7u2">ابوعبدالله جنیدی</a></li>
+      <li><a href="https://w.wiki/A7u3">نصر بن منصور</a></li>
+      <li><a href="https://w.wiki/A7u4">بدیع بلخی</a></li>
+      <li><a href="https://w.wiki/A7u5">بشار مرغزی</a></li>
+      <li><a href="https://w.wiki/A7u6">بندار رازی</a></li>
+      <li><a href="https://w.wiki/A7u7">بوالمثل بخارایی</a></li>
+      <li><a href="https://w.wiki/A7u8">ترک‌کشی ایلاقی</a></li>
+      <li><a href="https://w.wiki/A7uE">حکاک مرغزی</a></li>
+      <li><a href="https://w.wiki/A7uF">خبازی نیشابوری</a></li>
+      <li><a href="https://w.wiki/A7uG">خسروی سرخسی</a></li>
+      <li><a href="https://w.wiki/A7uK">رابعه بلخی</a></li>
+      <li><a href="https://w.wiki/A7uM">رونقی بخارایی</a></li>
+      <li><a href="https://w.wiki/A7uN">سپهری بخارایی</a></li>
+      <li><a href="https://w.wiki/A7uP">شاکر جلاب</a></li>
+      <li><a href="https://w.wiki/A7uV">شهید بلخی</a></li>
+      <li><a href="https://w.wiki/A7uQ">طاهر چغانی</a></li>
+      <li><a href="https://w.wiki/A7uR">طیان ژاژخای</a></li>
+      <li><a href="https://w.wiki/A7uT">عماره مروزی</a></li>
+      <li><a href="https://w.wiki/A7uU">قابوس بن وشمگیر</a></li>
+      <li><a href="https://w.wiki/A7uh">قمری جرجانی</a></li>
+      <li><a href="https://w.wiki/A7uX">لوکری</a></li>
+      <li><a href="https://w.wiki/A7uZ">محمد عبده کاتب</a></li>
+      <li><a href="https://w.wiki/A7uj">مسعودی مروزی</a></li>
+      <li><a href="https://w.wiki/A7ua">معروفی بلخی</a></li>
+      <li><a href="https://w.wiki/A7ub">اسماعیل منتصر سامانی</a></li>
+      <li><a href="https://w.wiki/A7uf">منجیک ترمذی</a></li>
+      <li><a href="https://w.wiki/A7ug">منطقی رازی</a></li>
+    </ul>
+
+    <script>
+      milestones('#timeline')
+        .mapping({
+          'timestamp': 'year',
+          'text': 'title',
+          'url': 'url'
+        })
+        .optimize(true)
+        .urlTarget('_blank')
+        .parseTime('%Y')
+        .aggregateBy('year')
+        .render([
+        { year: 244, title: 'رودکی', url: 'https://w.wiki/A7uL'},
+        { year: 300, title: 'ابوشکور بلخی', url: 'https://w.wiki/A7th'},
+        { year: 320, title: 'دقیقی', url: 'https://w.wiki/A7uJ'},
+        { year: 329, title: 'فردوسی', url: 'https://w.wiki/Qmt'},
+        { year: 341, title: 'کسایی', url: 'https://w.wiki/A7ui'},
+        { year: 396, title: 'خواجه عبدالله انصاری', url: 'https://w.wiki/A7uH'},
+        ]);
+    </script>
+  </body>
+</html>

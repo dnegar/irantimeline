@@ -272,4 +272,4 @@ timeline
 * شاعرانی که نام آن‌ها با * مشخص شده است، تاریخ زادروز آن‌ها حدودی است.
 * شاعرانی که تاریخ زادروز آن‌ها مشخص نیست، خارج از گاه‌شمار قرار گرفته‌اند.
 
-[poets](_timeline/poets.html ':include height=400px')
+[poets](_timeline/_poets/poets.html ':include height=400px')
