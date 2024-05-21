@@ -1,0 +1,18 @@
+ul {
+  font-size: 13px;
+  direction: rtl;
+  margin-top: 40px;
+}
+
+ul li {
+  float: right;
+  width: 15em;
+}
+
+br {
+  clear: right;
+}
+
+div.wrapper{
+  margin-bottom: 1em;
+}

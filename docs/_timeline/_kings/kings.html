@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="d3-milestones.css">
+    <script src="d3-milestones.min.js"></script>
+  </head>
+  <body>
+    <div id="timeline" style="margin-top: 200px;"></div>
+
+    <script>
+      milestones('#timeline')
+        .mapping({
+          'timestamp': 'year',
+          'text': 'title',
+          'url': 'url'
+        })
+        .optimize(true)
+        .urlTarget('_self')
+        .parseTime('%Y')
+        .aggregateBy('year')
+        .render([
+          { year: 224, title: 'امپراتوری ساسانی', url: 'sasanian.html'},
+          { year: 641, title: 'خلفای راشدین', url: 'rashidun.html'},
+          { year: 661, title: 'خلافت امویان', url: 'umayyadCaliphate.html'},
+          { year: 750, title: 'خلافت عباسیان', url: 'abbasidCaliphate.html'},
+          { year: 821, title: 'طاهریان', url: 'tahirid.html'},
+          { year: 861, title: 'صفاریان', url: 'saffarid.html'},
+          { year: 864, title: 'سامانیان', url: 'samanid.html'},
+          { year: 931, title: 'زیاریان', url: 'ziyarid.html'},
+          { year: 934, title: 'آل بویه', url: 'buyid.html'},
+          { year: 975, title: 'غزنویان', url: 'ghaznavids.html'},
+          { year: 1037, title: 'امپراتوری سلجوقیان', url: 'seljuk.html'},
+          { year: 1153, title: 'امپراتوری خوارزمشاهیان', url: 'khwarazmian.html'},
+          { year: 1256, title: 'امپراتوری ایلخانان', url: 'ilkhanate.html'},
+          { year: 1314, title: 'آل مظفر', url: 'muzaffarids.html'},
+          { year: 1370, title: 'امپراتوری تیموریان', url: 'timurid.html'},
+          { year: 1378, title: 'آق‌قویونلو و قراقویونلو', url: 'AqQoyunluAndQaraQoyunlu.html'},
+          { year: 1501, title: 'صفویه', url: 'safavid.html'},
+          { year: 1709, title: 'هوتکیان', url: 'hotak.html'},
+          { year: 1736, title: 'افشاریان', url: 'afsharid.html'},
+          { year: 1751, title: 'زندیان', url: 'zand.html'},
+          { year: 1789, title: 'قاجاریان', url: 'qajar.html'},
+          { year: 1925, title: 'پهلوی', url: 'pahlavi.html'}
+        ]);
+    </script>
+  </body>
+</html>

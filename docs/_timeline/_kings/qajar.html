@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="d3-milestones.css">
+    <link rel="stylesheet" href="timelineStylesheet.css">
+    <script src="d3-milestones.min.js"></script>
+  </head>
+  <body>
+    <a href="kings.html" style="display:inline-block;"><input type="button" value="بازگشت"/></a>
+    <p style="float:right;"><bold>قاجاریان</bold></p>
+    <div id="timeline" style="margin-top: 80px;"></div>
+
+    <script>
+      milestones('#timeline')
+        .mapping({
+          'timestamp': 'year',
+          'text': 'title',
+          'url': 'url'
+        })
+        .optimize(true)
+        .urlTarget('_blank')
+        .parseTime('%Y')
+        .aggregateBy('year')
+        .render([
+          { year: 1779, title: 'اقامحمدخان', url: ''},
+          { year: 1797, title: 'فتحعلی‌شاه', url: ''},
+          { year: 1834, title: 'محمدشاه', url: ''},
+          { year: 1848, title: 'ناصرالدین‌شاه', url: ''},
+          { year: 1896, title: 'مظفرالدین‌شاه', url: ''},
+          { year: 1907, title: 'محمدعلی‌شاه', url: ''},
+          { year: 1909, title: 'احمدشاه', url: ''},
+          { year: 1925, title: 'پایان حکومت قاجاریان', url: ''},
+        ]);
+    </script>
+  </body>
+</html>

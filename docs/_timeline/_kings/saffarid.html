@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="d3-milestones.css">
+    <link rel="stylesheet" href="timelineStylesheet.css">
+    <script src="d3-milestones.min.js"></script>
+  </head>
+  <body>
+    <a href="kings.html" style="display:inline-block;"><input type="button" value="بازگشت"/></a>
+    <p style="float:right;"><bold>صفاریان</bold></p>
+    <div id="timeline" style="margin-top: 80px;"></div>
+
+    <script>
+      milestones('#timeline')
+        .mapping({
+          'timestamp': 'year',
+          'text': 'title',
+          'url': 'url'
+        })
+        .optimize(true)
+        .urlTarget('_blank')
+        .parseTime('%Y')
+        .aggregateBy('year')
+        .render([
+          { year: 861, title: 'یعقوب لیث', url: ''},
+          { year: 879, title: 'عمرو لیث', url: ''},
+          { year: 901, title: 'طاهر بن محمد صفاری', url: ''},
+          { year: 908, title: 'لیث بن علی بن لیث', url: ''},
+          { year: 910, title: 'محمد بن علی لیث', url: ''},
+          { year: 911, title: 'المعدل بن علیالمعضل', url: ''},
+          { year: 912, title: 'عمرو بن یعقوب', url: ''},
+          { year: 922, title: 'احمد بن محمد بن خلف', url: ''},
+          { year: 963, title: 'خلف بن احمد', url: ''},
+          { year: 1002, title: 'پایان حکومت صفاریان', url: ''},
+        ]);
+    </script>
+  </body>
+</html>

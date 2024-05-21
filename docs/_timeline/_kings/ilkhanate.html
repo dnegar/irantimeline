@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="d3-milestones.css">
+    <link rel="stylesheet" href="timelineStylesheet.css">
+    <script src="d3-milestones.min.js"></script>
+  </head>
+  <body>
+    <a href="kings.html" style="display:inline-block;"><input type="button" value="بازگشت"/></a>
+    <p style="float:right;"><bold>امپراتوری ایلخانان</bold></p>
+    <div id="timeline" style="margin-top: 80px;"></div>
+
+    <script>
+      milestones('#timeline')
+        .mapping({
+          'timestamp': 'year',
+          'text': 'title',
+          'url': 'url'
+        })
+        .optimize(true)
+        .urlTarget('_blank')
+        .parseTime('%Y')
+        .aggregateBy('year')
+        .render([
+          { year: 1256, title: 'هولاکو خان', url: ''},
+          { year: 1265, title: 'اباقا خان', url: ''},
+          { year: 1282, title: 'احمد تگودار', url: ''},
+          { year: 1284, title: 'ارغون‌خان', url: ''},
+          { year: 1291, title: 'گیخاتو خان', url: ''},
+          { year: 1295, title: 'بایدوخان', url: ''},
+          { year: 1295, title: 'غازان خان', url: ''},
+          { year: 1304, title: 'محمد خدابنده', url: ''},
+          { year: 1316, title: 'ابوسعید بهادرخان', url: ''},
+          { year: 1335, title: 'آرپاکاوون (آذربایجان)', url: ''},
+          { year: 1336, title: 'موسی (آذربایجان و عراق)', url: ''},
+          { year: 1335, title: 'طغاتیمور (جرجان)', url: ''},
+          { year: 1336, title: 'پیرحسین (آذربایجان)', url: ''},
+          { year: 1338, title: 'ساتی‌بیگ (آذربایجان)', url: ''},
+          { year: 1338, title: 'عزالدین (عراق)', url: ''},
+          { year: 1338, title: 'الیاس (آذربایجان)', url: ''},
+          { year: 1342, title: 'سیف‌الملوک (گیلان)', url: ''},
+          { year: 1343, title: 'انوشیروان (آذربایجان)', url: ''},
+          { year: 1356, title: 'غازان دوم (آذربایجان)', url: ''},
+          { year: 1357, title: 'پایان امپراتوری ایلخانان', url: ''},
+        ]);
+    </script>
+  </body>
+</html>

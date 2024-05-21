@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="d3-milestones.css">
+    <link rel="stylesheet" href="timelineStylesheet.css">
+    <script src="d3-milestones.min.js"></script>
+  </head>
+  <body>
+    <a href="kings.html" style="display:inline-block;"><input type="button" value="بازگشت"/></a>
+    <p style="float:right;"><bold></bold></p>
+    <div id="timeline" style="margin-top: 80px;"></div>
+ 
+    <script>
+      milestones('#timeline')
+        .mapping({
+          'timestamp': 'year',
+          'text': 'title',
+          'url': 'url'
+        })
+        .optimize(true)
+        .urlTarget('_blank')
+        .parseTime('%Y')
+        .aggregateBy('year')
+        .render([
+          { year: 1370, title: 'تیمور', url: ''},
+          { year: 1405, title: 'میرانشاه گورکانی', url: ''},
+          { year: 1405, title: 'پیرمحمد جهانگیر', url: ''},
+          { year: 1405, title: 'خلیل سلطان', url: ''},
+          { year: 1405, title: 'شاهرخ', url: ''},
+          { year: 1409, title: 'الغ‌بیگ', url: ''},
+          { year: 1449, title: 'عبداللطیف میرزا', url: ''},
+          { year: 1450, title: 'عبدالله میرزا', url: ''},
+          { year: 1447, title: 'سلطان محمد پسر بایسنقر', url: ''},
+          { year: 1451, title: 'میرزا ابوالقاسم بابر', url: ''},
+          { year: 1469, title: 'سلطان احمد میرزا', url: ''},
+          { year: 1494, title: 'سلطان محمود میرزا', url: ''},
+          { year: 1457, title: 'میرزا شاه محمود', url: ''},
+          { year: 1451, title: 'ابوسعید گورکان', url: ''},
+          { year: 1457, title: 'ابراهیم میرزا', url: ''},
+          { year: 1456, title: 'عمر شیخ میرزای دوم', url: ''},
+          { year: 1470, title: 'یادگار محمد میرزا', url: ''},
+          { year: 1470, title: 'سلطان حسین بایقرا', url: ''},
+          { year: 1506, title: 'بدیع‌الزمان میرزا', url: ''},
+          { year: 1507, title: 'پایان امپراتوری تیموریان', url: ''},
+        ]);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="d3-milestones.css">
+    <link rel="stylesheet" href="timelineStylesheet.css">
+    <script src="d3-milestones.min.js"></script>
+  </head>
+  <body>
+    <a href="kings.html" style="display:inline-block;"><input type="button" value="بازگشت"/></a>
+    <p style="float:right;"><bold>غزنویان</bold></p>
+    <div id="timeline" style="margin-top: 80px;"></div>
+
+    <script>
+      milestones('#timeline')
+        .mapping({
+          'timestamp': 'year',
+          'text': 'title',
+          'url': 'url'
+        })
+        .optimize(true)
+        .urlTarget('_blank')
+        .parseTime('%Y')
+        .aggregateBy('year')
+        .render([
+          { year: 977, title: 'سبکتگین', url: ''},
+          { year: 997, title: 'اسماعیل بن سبکتگین', url: ''},
+          { year: 998, title: 'سلطان محمود', url: ''},
+          { year: 1030, title: 'سلطان محمد', url: ''},
+          { year: 1030, title: 'مسعود یکم', url: ''},
+          { year: 1040, title: 'سلطان محمد', url: ''},
+          { year: 1041, title: 'مودود', url: ''},
+          { year: 1048, title: 'مسعود دوم', url: ''},
+          { year: 1048, title: 'علی', url: ''},
+          { year: 1049, title: 'عبدالرشید', url: ''},
+          { year: 1052, title: 'طغرل', url: ''},
+          { year: 1053, title: 'فرخزاد', url: ''},
+          { year: 1059, title: 'ابراهیم', url: ''},
+          { year: 1099, title: 'مسعود', url: ''},
+          { year: 1116, title: 'ارسلان‌شاه', url: ''},
+          { year: 1117, title: 'بهرام‌شاه', url: ''},
+          { year: 1157, title: 'خسروشاه', url: ''},
+          { year: 1160, title: 'خسروملک', url: ''},
+          { year: 1186, title: 'پایان حکومت غزنویان', url: ''}
+      ])
+    </script>
+  </body>
+</html>
