@@ -10,6 +10,11 @@
   * https://docsify.js.org/#/plugins?id=full-text-search
   * https://github.com/corentinleberre/docsify-mermaid-zoom
 
+## کتابخانه timelinejs
+کتابخانه‌ای برای ایجاد گاه‌شمار
+* وبگاه: https://timeline.knightlab.com
+* گیت‌هاب: https://github.com/NUKnightLab/TimelineJS3
+
 ## کتابخانه D3
 کتابخانه‌ای جاوااسکریپتی برای مصورسازی داده‌ها با استفاده از SVG, Canvas و HTML.
 * وبگاه: https://d3js.org
