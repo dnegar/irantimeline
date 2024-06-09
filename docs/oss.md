@@ -21,3 +21,8 @@
 * گیت‌هاب: https://github.com/d3
 * پلاگین‌های استفاده شده
   * https://github.com/walterra/d3-milestones
+
+## فونت وزیرمتن
+پروژه وزیرمتن یک خانواده تایپ‌فیس فارسی-عربی با ۹ وزن است که به صورت متن‌باز منتشر شده است.
+* وبگاه: https://rastikerdar.github.io/vazirmatn/fa
+* گیت‌هاب: https://github.com/rastikerdar/vazirmatn
