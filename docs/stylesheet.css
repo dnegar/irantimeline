@@ -71,6 +71,7 @@ table td:before {
   bottom: auto !important;
   right: 0;
   left: auto !important;
+  padding-right: 100px;
 }
 
 @media screen and (max-width: 768px) {
