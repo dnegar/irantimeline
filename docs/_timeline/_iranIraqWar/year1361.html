@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="d3-milestones.css">
+    <link rel="stylesheet" href="timelineStylesheet.css">
+    <script src="d3-milestones.min.js"></script>
+  </head>
+  <body>
+    <a href="iranIraqWar.html" style="display:inline-block;"><input type="button" value="بازگشت"/></a>
+    <p style="float:right;"><bold>سال ۱۳۶۱</bold></p>
+    <div id="timeline" style="margin-top: 80px;"></div>
+    
+    <script>
+      milestones('#timeline')
+        .mapping({
+          'timestamp': 'year',
+          'text': 'title',
+        })
+        .optimize(true)
+        .aggregateBy('day')
+        .render([
+          { year: "1361-01-02T00:00", title: 'عملیات "فتح‌المبین" در غرب دزفول و شوش؛ آزادسازی مناطق وسیع'},
+          { year: "1361-02-10T00:00", title: 'آغاز عملیات "بیت‌المقدس" برای آزادسازی خرمشهر'},
+          { year: "1361-03-03T00:00", title: 'آزادسازی خرمشهر در عملیات "بیت‌المقدس"'},
+          { year: "1361-04-01T00:00", title: 'عملیات "رمضان" در شرق بصره'},
+          { year: "1361-09-07T00:00", title: 'آغاز عملیات "مسلم‌بن‌عقیل" در منطقه سومار'}
+         ])
+    </script>
+  </body>
+</html>

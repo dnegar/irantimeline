@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="d3-milestones.css">
+    <link rel="stylesheet" href="timelineStylesheet.css">
+    <script src="d3-milestones.min.js"></script>
+  </head>
+  <body>
+    <a href="iranIraqWar.html" style="display:inline-block;"><input type="button" value="بازگشت"/></a>
+    <p style="float:right;"><bold>سال ۱۳۶۴</bold></p>
+    <div id="timeline" style="margin-top: 80px;"></div>
+    
+    <script>
+      milestones('#timeline')
+        .mapping({
+          'timestamp': 'year',
+          'text': 'title',
+        })
+        .optimize(true)
+        .aggregateBy('day')
+        .render([
+          { year: "1364-11-20T00:00", title: 'عملیات "والفجر 8" و تصرف فاو توسط ایران'},
+          { year: "1364-04-19T00:00", title: 'عملیات "قدس 1" در منطقه هورالهویزه'},
+          { year: "1364-07-15T00:00", title: 'آغاز عملیات "قدس 2" در منطقه هورالهویزه'}
+         ])
+    </script>
+  </body>
+</html>
