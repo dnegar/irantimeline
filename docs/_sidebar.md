@@ -7,5 +7,6 @@
 * [جنگ ایران و عراق](iranIraqWar.md)
 * [انقلاب مشروطه](constitutionalRevolution.md)
 * [نخست‌وزیران](/primeMinisters.md)
+* [پایتخت‌های ایران](/iranCapitals.md)
 * [نرم‌افزارهای متن باز (OSS)](oss.md)
 * [سیاهه تغییرات](changelog.md)
