@@ -9,6 +9,7 @@
   * https://github.com/Leward/mermaid-docsify
   * https://docsify.js.org/#/plugins?id=full-text-search
   * https://github.com/corentinleberre/docsify-mermaid-zoom
+  * https://github.com/imyelo/docsify-plantuml
 
 ## کتابخانه timelinejs
 کتابخانه‌ای برای ایجاد گاه‌شمار
