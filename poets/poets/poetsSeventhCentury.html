@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="d3-milestones.css">
+    <link rel="stylesheet" href="timelineStylesheet.css">
+    <script src="d3-milestones.min.js"></script>
+  </head>
+  <body>
+    <a href="poets.html" style="display:inline-block;"><input type="button" value="بازگشت"/></a>
+    <p style="float:right;"><bold>قرن هفتم</bold></p>
+    <div id="timeline" style="margin-top: 80px;"></div>
+    <ul>
+      <li><a href="https://w.wiki/A8Xj" target="_blank">باباافضل کاشی</a></li>
+      <li><a href="https://w.wiki/A8Xh" target="_blank">کمال‌الدین اسماعیل</a></li>
+      <li><a href="https://w.wiki/A8Xk" target="_blank">بدر جاجرمی</a></li>
+      <li><a href="https://w.wiki/A8Xm" target="_blank">بساطی سمرقندی</a></li>
+      <li><a href="https://w.wiki/A8Xn" target="_blank">کیکاووس رازی</a></li>
+      <li><a href="https://w.wiki/A8Xo" target="_blank">زرتشت بهرام</a></li>
+      <li><a href="https://w.wiki/A8Xx" target="_blank">شمس مغربی</a></li>
+      <li><a href="https://w.wiki/A8Xw" target="_blank">ذوالفقار شروانی</a></li>
+    </ul>
+
+    <script>
+      milestones('#timeline')
+        .mapping({
+          'timestamp': 'year',
+          'text': 'title',
+          'url': 'url'
+        })
+        .optimize(true)
+        .urlTarget('_blank')
+        .parseTime('%Y')
+        .aggregateBy('year')
+        .render([
+          { year: 582, title: 'شمس تبریزی', url: 'https://w.wiki/A8Xr'},
+          { year: 585, title: 'سعدی (یا ۶۱۵)', url: 'https://w.wiki/9mRP'},
+          { year: 607, title: 'مجد همگر', url: 'https://w.wiki/A8Xq'},
+          { year: 604, title: 'مولوی', url: 'https://w.wiki/8EEo'},
+          { year: 636, title: 'همام تبریزی', url: 'https://w.wiki/A8Xu'},
+          { year: 645, title: 'سعدالدین نزاری قهستانی', url: 'https://w.wiki/A8Xt'},
+          { year: 651, title: 'امیرخسرو دهلوی', url: 'https://w.wiki/A8Xv'},
+          { year: 668, title: 'امین‌الدین بلیانی', url: 'https://w.wiki/A8Xp'},
+        ]);
+    </script>
+  </body>
+</html>

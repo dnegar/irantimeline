@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="d3-milestones.css">
+    <link rel="stylesheet" href="timelineStylesheet.css">
+    <script src="d3-milestones.min.js"></script>
+  </head>
+  <body>
+    <a href="poets.html" style="display:inline-block;"><input type="button" value="بازگشت"/></a>
+    <p style="float:right;"><bold>قرن دوازدهم</bold></p>
+    <div id="timeline" style="margin-top: 80px;"></div>
+
+    <script>
+      milestones('#timeline')
+        .mapping({
+          'timestamp': 'year',
+          'text': 'title',
+          'url': 'url'
+        })
+        .optimize(true)
+        .urlTarget('_blank')
+        .parseTime('%Y')
+        .aggregateBy('year')
+        .render([
+          { year: 1054, title: 'بیدل دهلوی', url: 'https://w.wiki/A8yh'},
+          { year: 1103, title: 'حزین لاهیجی', url: 'https://w.wiki/A8yg'}
+        ]);
+    </script>
+  </body>
+</html>

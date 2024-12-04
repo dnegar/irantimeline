@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="d3-milestones.css">
+    <link rel="stylesheet" href="timelineStylesheet.css">
+    <script src="d3-milestones.min.js"></script>
+  </head>
+  <body>
+    <a href="poets.html" style="display:inline-block;"><input type="button" value="بازگشت"/></a>
+    <p style="float:right;"><bold>قرن دهم</bold></p>
+    <div id="timeline" style="margin-top: 80px;"></div>
+    <ul>
+      <li><a href="https://w.wiki/A8xf" target="_blank">بابا فغانی شیرازی</a></li>
+      <li><a href="https://w.wiki/A8xg" target="_blank">ثنایی مشهدی</a></li>
+      <li><a href="https://w.wiki/A8xi" target="_blank">سحابی استرآبادی</a></li>
+      <li>شرف جهان قزوینی</li>
+      <li>شهیدی قمی</li>
+      <li><a href="https://w.wiki/A8xj" target="_blank">ضمیری اصفهانی</a></li>
+      <li><a href="https://w.wiki/A8xn" target="_blank">غزالی مشهدی</a></li>
+      <li>فکری جامه‌باف</li>
+      <li><a href="https://w.wiki/A8xp" target="_blank">محمدقاسم قاسمی گنابادی</a></li>
+      <li><a href="https://w.wiki/A8xr" target="_blank">لسانی شیرازی</a></li>
+      <li>میلی مشهدی</li>
+      <li><a href="https://w.wiki/A8xt" target="_blank">محمدحسین نظیری نیشابوری</a></li>
+      <li><a href="https://w.wiki/A8xu" target="_blank">نوعی خبوشانی</a></li>
+      <li><a href="https://w.wiki/A8xw" target="_blank">ولی دشت بیاضی</a></li>
+      <li><a href="https://w.wiki/A8xx" target="_blank">هلالی جغتایی</a></li>
+      <li>درویش دهکی</li>
+      <li>نظام استرآبادی</li>
+      <li>وحید تبریزی</li>
+      <li>فهمی استرآبادی</li>
+      <li><a href="https://w.wiki/A8xz" target="_blank">حیرتی تونی</a></li>
+      <li>فارغی مشهدی</li>
+      <li>عزیزی قزوینی</li>
+      <li>میر اشکی قمی</li>
+      <li>خواری تبریزی</li>
+      <li>خواجگی عنایت</li>
+      <li>صبری اصفهانی</li>
+      <li>شیخ رباعی</li>
+      <li>طرحی شیرازی</li>
+      <li>شجاع</li>
+      <li>کامی قزوینی</li>
+      <li>هجری قمی</li>
+      <li>حیدر کلیچه‌پز</li>
+      <li><a href="https://w.wiki/A8y3" target="_blank">عبدی بیگ شیرازی</a></li>
+      <li>کاهی کابلی</li>
+      <li>قیدی شیرازی</li>
+      <li>مخدوم شریفی</li>
+      <li>نظام‌الدین هاشمی</li>
+      <li>قراری گیلانی</li>
+      <li>حسابی نطنزی</li>
+      <li>رضایی کاشانی</li>
+      <li><a href="https://w.wiki/A8y6" target="_blank">محمدمیرک صالحی</a></li>
+      <li>حالتی تهرانی</li>
+      <li>صرفی ساوجی</li>
+      <li>حضوری قمی</li>
+      <li>قاضی نورالدین</li>
+      <li>غیرتی شیرازی</li>
+      <li>یادگاربیگ حالتی</li>
+      <li>وقوعی نیشابوری</li>
+      <li><a href="https://w.wiki/A8y7" target="_blank">وحشتی جوشقانی</a></li>
+      <li>انیسی شاملو</li>
+      <li>وقوعی تبریزی</li>
+      <li><a href="https://w.wiki/A8y8" target="_blank">شعیب جوشقانی</a></li>
+      <li>حیدر معمایی</li>
+      <li>فسونی یزدی</li>
+      <li>علی نقی کمره‌ای</li>
+    </ul>
+
+    <script>
+      milestones('#timeline')
+        .mapping({
+          'timestamp': 'year',
+          'text': 'title',
+          'url': 'url'
+        })
+        .optimize(true)
+        .urlTarget('_blank')
+        .parseTime('%Y')
+        .aggregateBy('year')
+        .render([
+          { year: 853, title: 'آصفی هروی', url: 'https://w.wiki/A8xe'},
+          { year: 858, title: 'هاتفی خرجردی', url: 'https://w.wiki/A8yC'},
+          { year: 858, title: 'اهلی شیرازی', url: 'https://w.wiki/A8xy'},
+          { year: 887, title: 'محمد فضولی', url: 'https://w.wiki/A8x$'},
+          { year: 905, title: 'محتشم کاشانی', url: 'https://w.wiki/A8xs'},
+          { year: 909, title: 'ملک قمی', url: 'https://w.wiki/A8y5'},
+          { year: 939, title: 'وحشی بافقی', url: 'https://w.wiki/A8xv'},
+          { year: 944, title: 'ظهوری ترشیزی*', url: 'https://w.wiki/A8xk'},
+          { year: 954, title: 'ابوالفتح گیلانی', url: 'https://w.wiki/A8xh'},
+          { year: 954, title: 'فیضی دکنی', url: 'https://w.wiki/A8xo'},
+          { year: 963, title: 'عرفی شیرازی', url: 'https://w.wiki/A8xm'},
+        ]);
+    </script>
+  </body>
+</html>

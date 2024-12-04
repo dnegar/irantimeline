@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>گاه‌شمار آل مظفر</title>
+    <link rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+  </head>
+  <body>
+    <a href="kingdoms.html"><input type="button" value="بازگشت"/></a>
+    <div id="timeline-embed" style="margin-top: 10px; width: 100%; height: 600px"></div>
+
+    <script>
+      var timelineData = {
+        "title": {
+          "text": {
+            "headline": "گاه‌شمار آل مظفر",
+            "text": "<p>براساس زمان آغاز و پایان هر پادشاه</p>"
+          }
+        },
+        "events": [
+          {
+            "start_date": {
+              "year": "1314",
+              "month": ""
+            },
+            "end_date": {
+              "year" : "1358",
+              "month": ""
+            },
+            "text": {
+              "headline": "مبارزالدین محمد",
+              "text": "بنیان‌گذار دولت"
+            },
+            "media": {
+              "url": "https://fa.wikipedia.org/wiki/%D8%A7%D9%85%DB%8C%D8%B1_%D9%85%D8%A8%D8%A7%D8%B1%D8%B2%D8%A7%D9%84%D8%AF%DB%8C%D9%86",
+            }
+          },
+          {
+            "start_date": {
+              "year": "1358",
+              "month": ""
+            },
+            "end_date": {
+              "year" : "1374",
+              "month": ""
+            },
+            "text": {
+              "headline": "شاه محمود",
+              "text": "تنها در اصفهان حکومت داشت"
+            },
+            "media": {
+              "url": "https://fa.wikipedia.org/wiki/%D9%82%D8%B7%D8%A8_%D8%A7%D9%84%D8%AF%DB%8C%D9%86_%D8%B4%D8%A7%D9%87_%D9%85%D8%AD%D9%85%D9%88%D8%AF",
+            }
+          },
+          {
+            "start_date": {
+              "year": "1358",
+              "month": ""
+            },
+            "end_date": {
+              "year" : "1384",
+              "month": ""
+            },
+            "text": {
+              "headline": "شاه شجاع",
+              "text": "از سال ۷۷۶ق / ۱۳۸۴م، اصفهان را هم به قلمروی خودش اضافه کرد"
+            },
+            "media": {
+              "url": "https://fa.wikipedia.org/wiki/%D8%AC%D9%84%D8%A7%D9%84%E2%80%8C%D8%A7%D9%84%D8%AF%DB%8C%D9%86_%D8%B4%D8%A7%D9%87%E2%80%8C%D8%B4%D8%AC%D8%A7%D8%B9",
+            }
+          },
+          {
+            "start_date": {
+              "year": "1384",
+              "month": ""
+            },
+            "end_date": {
+              "year" : "1387",
+              "month": ""
+            },
+            "text": {
+              "headline": "زین‌العابدین علی",
+              "text": "توسط تیمور برکنار شد"
+            },
+            "media": {
+              "url": "https://fa.wikipedia.org/wiki/%D8%B3%D9%84%D8%B7%D8%A7%D9%86_%D8%B2%DB%8C%D9%86%E2%80%8C%D8%A7%D9%84%D8%B9%D8%A7%D8%A8%D8%AF%DB%8C%D9%86",
+            }
+          },
+          {
+            "start_date": {
+              "year": "1384",
+              "month": ""
+            },
+            "end_date": {
+              "year" : "1393",
+              "month": ""
+            },
+            "text": {
+              "headline": "عمادالدین احمد",
+              "text": "تنها در کرمان حکومت می‌کرد. در جریان قتل‌عام خاندان مظفریان در سال ۷۹۵، کشته شد."
+            },
+            "media": {
+              "url": "https://fa.wikipedia.org/wiki/%D8%B9%D9%85%D8%A7%D8%AF%D8%A7%D9%84%D8%AF%DB%8C%D9%86_%D8%A7%D8%AD%D9%85%D8%AF",
+            }
+          },
+          {
+            "start_date": {
+              "year": "1384",
+              "month": ""
+            },
+            "end_date": {
+              "year" : "1393",
+              "month": ""
+            },
+            "text": {
+              "headline": "شاه یحیی",
+              "text": "تنها در یزد حکومت می‌کرد. در جریان قتل‌عام خاندان مظفریان در سال ۷۹۵، کشته شد"
+            },
+            "media": {
+              "url": "https://fa.wikipedia.org/wiki/%D8%B4%D8%A7%D9%87_%DB%8C%D8%AD%DB%8C%DB%8C",
+            }
+          },
+          {
+            "start_date": {
+              "year": "1388",
+              "month": ""
+            },
+            "end_date": {
+              "year" : "1393",
+              "month": ""
+            },
+            "text": {
+              "headline": "شاه منصور",
+              "text": "در شیراز و شوشتر مقابل تیمور به مقاومت برخاست اما شکست خورد."
+            },
+            "media": {
+              "url": "https://fa.wikipedia.org/wiki/%D8%B4%D8%A7%D9%87_%D9%85%D9%86%D8%B5%D9%88%D8%B1",
+            }
+          }
+        ]
+      };
+
+      var options = {
+        initial_zoom: 3,  // میزان زوم اولیه
+        timenav_height_percentage: 30,  // ارتفاع تایم‌ناویگیتور به درصد
+        marker_height_min: 30,  // حداقل ارتفاع مارکرها
+        marker_width_min: 180,  // حداقل عرض مارکرها
+        hash_bookmark: true,  // استفاده از بوکمارک‌ها در URL
+        start_at_end: false,  // شروع از انتهای تایم‌لاین
+        default_bg_color: {r:255, g:255, b:255},  // رنگ پس‌زمینه پیش‌فرض
+        timenav_position: 'top',  // موقعیت تایم‌ناویگیتور
+        optimal_tick_width: 100,  // عرض بهینه تیک‌ها
+        lang: 'fa'
+      };
+      window.timeline = new TL.Timeline('timeline-embed', timelineData, options);
+    </script>
+  </body>
+</html>
