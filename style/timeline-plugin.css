@@ -1,0 +1,114 @@
+.timeline {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1px;
+    direction: ltr;
+}
+
+.timeline p {
+    margin: 0 0 3px 0;
+}
+
+.timeline-container{
+    width: 100%;
+    position: relative;
+    margin: 50px 0;
+    padding-bottom: 20px;
+}
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    width: 1px;
+    background-color: #000;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    display: flex;
+    position: relative;
+}
+
+.timeline-item:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.timeline-item-content {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    position: relative;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 1.5;
+    border-bottom: 1px solid #000;
+    min-height: 85px;
+    overflow: hidden;
+}
+
+.timeline-item-content .text {
+    flex: 1;
+    padding: 5px 10px;
+    text-align: center;
+    align-self: baseline;
+}
+
+.timeline-item-content .text h3 {
+    margin: 0;
+}
+
+.timeline-item-content .box {
+    width: 80px;
+    height: 100%;
+    display: flex;
+    align-items: start;
+    padding: 5px 0;
+    overflow: hidden;
+}
+
+.timeline-item-content .box .image{
+    width: 80px;
+    /* height: 80px; */
+    width: 80px;
+    min-height: 80px;
+    /* height: 100%; */
+    overflow: hidden;
+    /* background-color: #aaa; */
+}
+
+.timeline-item:nth-child(odd) .timeline-item-content {
+    flex-direction: row-reverse;
+}
+
+.timeline-circle {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    border: 1px solid #000;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-item-content span {
+    color: #4d4d4d;
+}
+
+.timeline-item:nth-child(odd) .timeline-item-content .text{
+    left: 20px;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) .timeline-item-content .text{
+    right: 20px;
+    text-align: left;
+}
