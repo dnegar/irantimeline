@@ -9,4 +9,4 @@
 - [مکان‌ها](places/places.md)
 - [موسیقی](music/music.md)
 - [نرم‌افزارهای متن باز (OSS)](oss.md)
-- [سیاهه تغییرات](changelog.md)
+- [تاریخچه تغییرات](changelog.md)
