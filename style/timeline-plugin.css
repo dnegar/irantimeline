@@ -57,6 +57,7 @@
     padding: 5px 10px;
     text-align: center;
     align-self: baseline;
+    direction: rtl;
 }
 
 .timeline-item-content .text h3 {

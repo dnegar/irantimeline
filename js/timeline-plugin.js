@@ -69,7 +69,7 @@ window.$docsify.plugins = window.$docsify.plugins.concat(function (hook) {
           currentItem.date = line.substring(1).trim();
         } else if (line.startsWith(':')) {
           // Description subdata
-          currentItem.description += line.substring(1) + '\n';
+          currentItem.description += line.substring(1) + '  \n';
         }
       });
 
