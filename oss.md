@@ -6,10 +6,7 @@
 * وبگاه: https://docsify.js.org
 * گیت‌هاب: https://github.com/docsifyjs/docsify
 * پلاگین‌های استفاده شده
-  * https://github.com/Leward/mermaid-docsify
   * https://docsify.js.org/#/plugins?id=full-text-search
-  * https://github.com/corentinleberre/docsify-mermaid-zoom
-  * https://github.com/imyelo/docsify-plantuml
 
 ## کتابخانه گاه‌شمار فارسی
 * گیت‌هاب: https://github.com/barnevis/docsify_plugins
