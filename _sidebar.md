@@ -1,6 +1,6 @@
 <!-- docs/_sidebar.md -->
 
-- [خانه](README.md)
+- [خانه](home.md)
 - [پادشاهی‌های و حکومت‌ها](kingdoms/kingdoms.md)
 - [شاعران](poets/poets.md)
 - [جنگ‌ها](wars/wars.md)
