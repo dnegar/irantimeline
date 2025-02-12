@@ -19,7 +19,7 @@ const milestonePlugin = (hook, vm) => {
 
   hook.beforeEach(function (content) {
     let events = [];
-
+    timelineData = [];
     const regex = /\.{3}رویدادنامه([\s\S]*?)\.{3}/g;
     const matches = content.match(regex);
 
