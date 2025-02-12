@@ -1,0 +1,118 @@
+.neiltime {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1px;
+    direction: rtl;
+    text-align: right;
+}
+
+.neiltime p {
+    margin: 0 0 3px 0;
+}
+
+.neiltime-container{
+    width: 100%;
+    position: relative;
+    margin: 50px 0;
+    padding-bottom: 20px;
+}
+
+.neiltime-container::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 3px;
+    background-color: #CCD5DB;
+    top: 0;
+    bottom: 0;
+    left: calc(100% - 182px);
+    transform: translateX(-calc(100% - 180px));
+}
+
+.neiltime-item {
+    display: flex;
+    position: relative;
+}
+
+.neiltime-item-content {
+    display: grid;
+    grid-template-columns: 180px auto;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 1.5;
+    min-height: 85px;
+    overflow: hidden;
+}
+
+.neiltime-item-content .text {
+    flex: 1;
+    padding: 5px 50px;
+    text-align: right;
+    align-self: baseline;
+    direction: rtl;
+}
+
+.neiltime-item-content h4 {
+    margin: 0;
+    font-size: 18px;
+    padding: 3px;
+}
+
+.neiltime-item-content .box {
+    width: 80px;
+    height: 100%;
+    display: flex;
+    align-items: start;
+    padding: 5px 0;
+    overflow: hidden;
+}
+
+.neiltime-item-content .box .image{
+    width: 80px;
+    width: 80px;
+    min-height: 80px;
+    overflow: hidden;
+}
+
+.neiltime-circle {
+    position: absolute;
+    top: 15px;
+    left: calc(100% - 180px);
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: #8c0000;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.neiltime-item-content span {
+    color: #4d4d4d;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .neiltime-item-content{
+        grid-template-columns: 70px auto;
+    }
+    .neiltime-container::before {
+        left: calc(100% - 82px);
+    }
+    .neiltime-circle {
+        left: calc(100% - 80px);
+        top: 22px;
+    }
+
+    .neiltime-item-content h4{
+        padding: 5px;
+    }
+
+    .neiltime-item-content .text {
+        padding: 5px ;
+        padding-right: 30px;
+    }
+  }

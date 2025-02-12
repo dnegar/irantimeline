@@ -1,0 +1,161 @@
+.milestone{
+  position: relative;
+  /* padding: 160px 0 315px 0; */
+  white-space: nowrap;
+  direction: rtl !important;
+}
+
+.milestone-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  height: 100%;
+}
+
+.milestone-horizontal {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #888;
+  z-index: 1;
+}
+
+.milestone-event {
+  position: absolute;
+  display: flex;
+  align-items: flex-start;
+  height: 60px; 
+}
+
+.milestone-item-content{
+  z-index: 10;
+}
+
+.reverse{
+  direction: ltr;
+}
+
+.reverse .milestone-item-content .milestone-year{
+  text-align: left;
+}
+
+.top{
+  
+}
+.bottom{
+  align-items: end;
+}
+
+.milestone-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+  justify-content: center;
+}
+
+
+
+.milestone-horizontal::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #333;
+  z-index: 0;
+}
+
+.top-container {
+  position: absolute;
+  top: calc(50% - 52px);
+  align-items: start;
+  width: 100%;
+  left: 0;
+}
+
+.bottom-container {
+  position: absolute;
+  top: calc(50% - 6px);
+  align-items: flex-end;
+  width: 100%;
+  left: 0;
+}
+
+
+
+/* === */
+
+
+.milestone-item-arrow{
+}
+
+
+
+.milestone-item-arrow{
+  position: relative;
+  width: 14px;
+  height: 100%;
+}
+
+.milestone-connector {
+  width: 2px;
+  min-height: 40px;
+  background: #777;
+  margin: 0 auto;
+  z-index: 0;
+  height: 100%;
+}
+.milestone-circle {
+  width: 14px;
+  height: 14px;
+  background: #d4b483;
+  border: 2px solid #444;
+  border-radius: 50%;
+  z-index: 3;
+  position: absolute;
+}
+
+.top  .milestone-circle {
+  bottom: 0;
+}
+
+.bottom  .milestone-circle {
+  top: 0;
+  
+}
+
+.bottom .milestone-item-content {
+  
+}
+
+/* ----- */
+
+ .milestone-item-content .milestone-year {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  /* color: #ccc;   */
+  direction: ltr !important;
+  text-align: right;
+}
+
+ .milestone-item-content .milestone-description {
+  font-size: 13px;
+  /* color: #ccc;  */
+  max-width: 220px;
+  /* box-shadow: 4px 2px 20px rgb(0 0 0 / 30%);
+  background-color: #00000030;
+  border-radius: 23%; */
+}
+
+@media (max-width: 600px) {
+  .milestone-event {
+    margin: 0 10px;
+  }
+  .milestone-description {
+    max-width: 150px;
+  }
+}
