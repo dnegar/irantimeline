@@ -1,6 +1,13 @@
 
-let maxHeight = 0;
-const adjustment = 60;
+
+
+function debounce(func, wait) {
+  let timeout;
+  return function(...args) {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(this, args), wait);
+  };
+}
 
 function convertToNumber(text) {
 
@@ -15,16 +22,20 @@ function convertToNumber(text) {
 }
 
 const milestonePlugin = (hook, vm) => {
-  let timelineData = [];
+  let maxHeight = 0;
+  const adjustment = 60;
+  let timelines = [];
 
   hook.beforeEach(function (content) {
     let events = [];
-    timelineData = [];
+    let timelineData = [];
+
     const regex = /\.{3}رویدادنامه([\s\S]*?)\.{3}/g;
     const matches = content.match(regex);
 
     if (matches) {
       matches.forEach(match => {
+        timelineData = [];
         const lines = match
           .trim()
           .split('\n')
@@ -33,11 +44,11 @@ const milestonePlugin = (hook, vm) => {
         lines.forEach(line => {
           if (line.startsWith('>')) {
             const [time, desc] = line.split(' : ');
-            events.push({ time: convertToNumber(time.trim().replace(/>\s*/, '')), desc: desc.trim() });
+            timelineData.push({ time: convertToNumber(time.trim().replace(/>\s*/, '')), desc: desc.trim() });
           }
         });
-        timelineData = [...timelineData, ...events];
-        content = content.replace(match, '<div class="milestone" id="milestone-timeline"></div>');
+        content = content.replace(match, `<div class="milestone" id="milestone-timeline-${timelines.length}"></div>`);
+        timelines.push(timelineData);
       });
     }
     return content;
@@ -46,70 +57,75 @@ const milestonePlugin = (hook, vm) => {
   hook.doneEach(drawEvents);
 
   function drawEvents(){
-    const container = document.getElementById('milestone-timeline');
-    if (!container || timelineData.length === 0) return;
-    timelineData.sort((a, b) => a.time - b.time);
-
-    const containerWidth = container.offsetWidth;
-    const min = timelineData[0].time;
-    const max = timelineData[timelineData.length - 1].time;
-
-    // Split events into two groups
-    const topEventsHTML = [];
-    const bottomEventsHTML = [];
-
-    // Reverse the array to match your original ordering
-    timelineData.forEach((event, index) => {
-      const normalized = (event.time - min) / (max - min);
-      const positionPercent = (1-(1 - normalized)) * 100;
-
-      // Build the event's HTML
-      const eventHTML = `
-        <div 
-          ${(index === timelineData.length - 1)?"id='last-item'":""}
-          class="milestone-event  ${index % 2 === 0 ? 'top' : 'bottom'}"
-          style="right:${positionPercent}%; position: absolute;">
-          <div class="milestone-item-arrow">
-            <div class="milestone-connector"></div>
-            <div class="milestone-circle"></div>
+   
+    timelines.forEach((timelineData,time_index) => {
+      const container = document.getElementById(`milestone-timeline-${time_index}`);
+      if (!container || timelineData.length === 0) return;
+      timelineData.sort((a, b) => a.time - b.time);
+  
+      const containerWidth = container.offsetWidth;
+      const min = timelineData[0].time;
+      const max = timelineData[timelineData.length - 1].time;
+  
+      // Split events into two groups
+      const topEventsHTML = [];
+      const bottomEventsHTML = [];
+  
+      // Reverse the array to match your original ordering
+      timelineData.forEach((event, index) => {
+        const normalized = (event.time - min) / (max - min);
+        const positionPercent = (1-(1 - normalized)) * 100;
+  
+        // Build the event's HTML
+        const eventHTML = `
+          <div 
+            ${(index === timelineData.length - 1)?"id='last-item-"+time_index+"'":""}
+            class="milestone-event  ${index % 2 === 0 ? 'top' : 'bottom'}"
+            style="right:${positionPercent}%; position: absolute;">
+            <div class="milestone-item-arrow">
+              <div class="milestone-connector"></div>
+              <div class="milestone-circle"></div>
+            </div>
+            <div class="milestone-item-content">
+              <div class="milestone-year">${event.time}</div>
+              <div class="milestone-description">${marked(event.desc)}</div>
+            </div>
           </div>
-          <div class="milestone-item-content">
-            <div class="milestone-year">${event.time}</div>
-            <div class="milestone-description">${event.desc}</div>
+        `;
+  
+        if (index % 2 === 0) {
+          topEventsHTML.push(eventHTML);
+        } else {
+          bottomEventsHTML.push(eventHTML);
+        }
+      });
+  
+      // Build the final HTML for the timeline container.
+      const timelineHTML = `
+        <div class="milestone-container">
+          <div class="milestone-horizontal"></div>
+          <div class="top-container">
+            ${topEventsHTML.join('')}
+          </div>
+          <div class="bottom-container">
+            ${bottomEventsHTML.join('')}
           </div>
         </div>
       `;
+  
+      container.innerHTML = timelineHTML;
 
-      if (index % 2 === 0) {
-        topEventsHTML.push(eventHTML);
-      } else {
-        bottomEventsHTML.push(eventHTML);
-      }
+      lastElement = document.getElementById(`last-item-${time_index}`);
+  
+      reverseLastEvent(lastElement);
+      
+      // After rendering the timeline, adjust for collisions
+      adjustTimelineEvents(container);
+      
     });
-
-    // Build the final HTML for the timeline container.
-    const timelineHTML = `
-      <div class="milestone-container">
-        <div class="milestone-horizontal"></div>
-        <div class="top-container">
-          ${topEventsHTML.join('')}
-        </div>
-        <div class="bottom-container">
-          ${bottomEventsHTML.join('')}
-        </div>
-      </div>
-    `;
-
-    container.innerHTML = timelineHTML;
-
-    reverseLastEvent();
-    
-    // After rendering the timeline, adjust for collisions
-    adjustTimelineEvents();
   }
 
-  function reverseLastEvent() {
-    const lastEvent = document.getElementById("last-item");
+  function reverseLastEvent(lastEvent) {
 
     lastEvent.classList.add("reverse");
 
@@ -118,16 +134,16 @@ const milestonePlugin = (hook, vm) => {
     lastEvent.style.right = `calc(${lastEvent.style.right} - ${lastEventWidth}px)`;
   }
 
-  function adjustTimelineEvents() {
+  function adjustTimelineEvents(container) {
     // Process both groups independently.
-    adjustGroup('.top-container', true); 
-    adjustGroup('.bottom-container', false); 
+    adjustGroup(container, '.top-container', true); 
+    adjustGroup(container, '.bottom-container', false); 
   }
 
-  function adjustGroup(selector, istop) {
-    const milestoneContainer = document.querySelector('.milestone');
+  function adjustGroup(container, selector, istop) {
+    
     // Get all timeline events in the group
-    let events = document.querySelectorAll(selector + ' .milestone-event');
+    let events = container.querySelectorAll(selector + ' .milestone-event');
     if (!events || events.length === 0) return;
   
     // Convert to an array and sort by their right position
@@ -164,7 +180,7 @@ const milestonePlugin = (hook, vm) => {
   
       const current = events[i];
 
-      if(current.id != "last-item"){
+      if(!current.id.includes("last-item")){
         const prev = events[i - 1];
         const preprev = events[i - 2];
         const currentRect = current.getBoundingClientRect();
@@ -193,20 +209,21 @@ const milestonePlugin = (hook, vm) => {
         }
   
         if (currentRect.height > maxHeight) {
+          
           maxHeight = currentRect.height;
         }
       }
-
+      
     }
-
     // Apply the height
-    milestoneContainer.style.height = maxHeight + "px";
+    container.closest('.milestone').style.height = (maxHeight+60) + "px";
+    maxHeight = 0;
   }
 
-  window.onresize = function() {
+  window.onresize = debounce(() => {
     maxHeight = 0;
     drawEvents();
-  };
+  }, 200);
 };
 
 window.$docsify = window.$docsify || {};

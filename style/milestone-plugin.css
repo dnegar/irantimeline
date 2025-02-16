@@ -5,6 +5,10 @@
   direction: rtl !important;
 }
 
+.milestone p {
+  margin: 0;
+}
+
 .milestone-container {
   display: flex;
   align-items: center;
