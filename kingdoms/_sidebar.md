@@ -4,7 +4,7 @@
 - [پادشاهی‌های و حکومت‌ها](kingdoms/kingdoms.md "گاه‌شمار پادشاهی‌ها و حکومت‌های ایران")
 - [پادشاهی ماد](kingdoms/kingdomsTimeline/medianEmpire.md "گاه‌شمار پادشاهی ماد")
 - [امپراتوری هخامنشی](kingdoms/kingdomsTimeline/achaemenidEmpire.md "گاه‌شمار امپراتوری هخامنشی")
-- [امپراتوری سلوکیان](kingdoms/kingdomsTimeline/seleucidEmpire.md "گاه‌شمار امپراتوری سلوکیان")
+- [امپراتوری سلوکی](kingdoms/kingdomsTimeline/seleucidEmpire.md "گاه‌شمار امپراتوری سلوکیان")
 - [امپراتوری اشکانی](kingdoms/kingdomsTimeline/parthianEmpire.md "گاه‌شمار امپراتوری اشکانی")
 - [امپراتوری ساسانی](kingdoms/kingdomsTimeline/sasanianEmpire.md "گاه‌شمار امپراتوری ساسانی")
 - [خلفای راشدین](kingdoms/kingdomsTimeline/rashidunEmpire.md "گاه‌شمار خلفای راشدین")
