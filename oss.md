@@ -16,13 +16,6 @@
 * وبگاه: https://timeline.knightlab.com
 * گیت‌هاب: https://github.com/NUKnightLab/TimelineJS3
 
-## کتابخانه D3
-کتابخانه‌ای جاوااسکریپتی برای مصورسازی داده‌ها با استفاده از SVG, Canvas و HTML.
-* وبگاه: https://d3js.org
-* گیت‌هاب: https://github.com/d3
-* پلاگین‌های استفاده شده
-  * https://github.com/walterra/d3-milestones
-
 ## فونت وزیرمتن
 پروژه وزیرمتن یک خانواده تایپ‌فیس فارسی-عربی با ۹ وزن است که به صورت متن‌باز منتشر شده است.
 * وبگاه: https://rastikerdar.github.io/vazirmatn/fa
